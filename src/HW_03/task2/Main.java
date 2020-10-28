@@ -15,12 +15,29 @@ public class Main {
         adress.forEach((k, v) ->
                 System.out.println("Город: " + k + ", семья: " + v));
 
+        System.out.println("*** HashTable ***");
         // Создание HashTable
         Enumeration city;
         Enum tmp;
         Hashtable<City, String> sht = new Hashtable<>(Map.copyOf(adress));
         city = sht.keys();
 
+        while (city.hasMoreElements()) {
+            tmp = (Enum) city.nextElement();
+            System.out.println(tmp + ": " + sht.get(tmp));
+
+        }
+
+        sht.remove(City.KIEV);
+        sht.remove(City.MOSCOW);
+        sht.remove(City.LONDON);
+        System.out.println(sht.isEmpty());
+        sht.put(City.KIEV, "Ivanov's");
+        sht.put(City.MOSCOW, "Petrov's");
+        sht.put(City.LONDON, "Yacechko");
+        sht.put(City.JAIL, "Abramovich's");
+
+        city = sht.keys();
         while (city.hasMoreElements()) {
             tmp = (Enum) city.nextElement();
             System.out.println(tmp + ": " + sht.get(tmp));
