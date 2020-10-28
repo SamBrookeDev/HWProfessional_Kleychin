@@ -9,13 +9,12 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите количество чисел: ");
         int size = in.nextInt();
+
         Methods newMethods = new Methods();
         for (int i = 1; i <= size; i++) {
             System.out.print("Введите число №" + i + " : ");
             newMethods.getInteger(in.nextInt());
-
         }
-
         newMethods.getMinimum();
     }
 }
