@@ -1,6 +1,8 @@
 package HW_03.task2;
 
 import java.util.EnumMap;
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Map;
 
 public class Main {
@@ -12,6 +14,18 @@ public class Main {
 
         adress.forEach((k, v) ->
                 System.out.println("Город: " + k + ", семья: " + v));
+
+        // Создание HashTable
+        Enumeration city;
+        Enum tmp;
+        Hashtable<City, String> sht = new Hashtable<>(Map.copyOf(adress));
+        city = sht.keys();
+
+        while (city.hasMoreElements()) {
+            tmp = (Enum) city.nextElement();
+            System.out.println(tmp + ": " + sht.get(tmp));
+
+        }
 
 
     }
