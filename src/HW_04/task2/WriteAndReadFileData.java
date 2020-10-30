@@ -1,6 +1,5 @@
-package HW_04.additionalTask;
+package HW_04.task2;
 
-import java.awt.image.DataBuffer;
 import java.io.*;
 
 public class WriteAndReadFileData {
